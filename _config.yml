@@ -9,7 +9,7 @@ relative_permalinks: true
 # Setup
 title:            Mike Stokes
 tagline:          'A Jekyll theme'
-description:      'A blog by a developer who loves technology and is lucky enough to play with it on a daily basis.'
+description:      'A blog by a coder who loves tech and is lucky enough to play in his sandpit with it every day.'
 url:              http://mikestokes.co
 baseurl:          /
 
