@@ -20,8 +20,8 @@ public class YourEntity
 
 ```
 
-## Serializing Lists as Collections
+## Serializing using Complex Types
 
-I'm going to outline a solution 
+After searching I cam upon a solution from [Bernhard Kircker](http://stackoverflow.com/questions/11985267/entity-framework-options-to-map-list-of-strings-or-list-of-int-liststring) that we have put into production and has been working very well for us. I'll outline here what we did, with thanks to Bernhard.
 
-
+### Creating a Custom ICollection
