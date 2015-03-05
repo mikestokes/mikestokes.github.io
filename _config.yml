@@ -8,8 +8,8 @@ relative_permalinks: true
 
 # Setup
 title:            Mike Stokes
-tagline:          'A development blog'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+tagline:          'A Jekyll theme'
+description:      'A blog by a developer who loves technology and is lucky enough to play with it on a daily basis.'
 url:              http://mikestokes.co
 baseurl:          /
 
@@ -23,4 +23,4 @@ paginate:         5
 version:          2.1.0
 
 github:
-  repo:           https://github.com/poole/hyde
+  repo:           https://github.com/mikestokes
