@@ -1,9 +1,11 @@
 ---
 layout: post
 title: Entity Framework and Lists
+category: programming
+tags: [c#, entity framework]
 ---
 
-By default [Entity Framework](http://www.asp.net/entity-framework) (as of version 6.x) does not support serialization of Lists to a database field. This is a frustrating limitation as this can be a useful mechanism to store 
+By default [Entity Framework](http://www.asp.net/entity-framework) (as of version 6.x) does not support serialization of Lists to a database field.
 
 For example, the following is *not* possible by default in Entity Framework:
 
@@ -19,13 +21,38 @@ public class YourEntity
 }
 ```
 
-## Serializing using Complex Types
+## Serializing Lists using Entity Framework Complex Types
 
-After searching I came upon a solution from [Bernhard Kircker](http://stackoverflow.com/questions/11985267/entity-framework-options-to-map-list-of-strings-or-list-of-int-liststring) that we have put into production and has been working very well for us. I'll outline here what we did, with thanks to Bernhard.
+After searching I came upon a rather simple (and re-usable) solution from [Bernhard Kircker](http://stackoverflow.com/questions/11985267/entity-framework-options-to-map-list-of-strings-or-list-of-int-liststring) that we have put into production and has been working very well for us. I'll outline here what we did, with thanks to Bernhard for the solution.
+
+With Bernhard's solution, the above Entity class can simply be changed and Entity Framework will take care of the rest for you:
+
+```c#
+[Table("YourTableName")]
+public class YourEntity
+{
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    public int Id { get; set; }
+
+	[Column("YourColumnName", TypeName ="ntext")]
+	public virtual PersistableStringCollection YourList { get; set; }
+}
+```
+
+### Using the Collection
+
+You can use the collection very simply - just like you would a normal .NET Framework enumerable, for example:
+
+Adding a value: `YourEntity.YourList.Add(value);`
+
+Clearing the collection: `YourEntity.YourList.Clear();`
 
 ### Creating a Custom ICollection
 
-We need a simple base ICollection class which can be extended for each type we wish to serialize (string, int etc):
+So, what is needed to achieve this?
+
+We need a simple base ICollection class which can be extended for each type we wish to serialize (string, int etc). Luckily Bernhard has done most of the heavy lifting for us here and I've included this below for completeness:
 
 ```c#
 /// <summary>
@@ -67,7 +94,7 @@ public abstract class PersistableScalarCollection<T> : ICollection<T>
 
 	/// <summary>
 	/// Deriving classes can override the string that is used to separate single values
-	/// </summary>        
+	/// </summary>
 	protected virtual string ValueSeperator
 	{
 		get
@@ -78,7 +105,7 @@ public abstract class PersistableScalarCollection<T> : ICollection<T>
 
 	/// <summary>
 	/// Deriving classes can override the string that is used to separate single values
-	/// </summary>        
+	/// </summary>
 	protected virtual string[] ValueSeperators
 	{
 		get
@@ -89,7 +116,7 @@ public abstract class PersistableScalarCollection<T> : ICollection<T>
 
 	/// <summary>
 	/// DO NOT Modify manually! This is only used to store/load the data.
-	/// </summary>        
+	/// </summary>
 	public string SerializedValue
 	{
 		get
@@ -172,12 +199,11 @@ public abstract class PersistableScalarCollection<T> : ICollection<T>
 }
 ```
 
+### List of Strings
+
 For example, if we need to serialize a list of strings, we simply create the following class:
 
 ```c#
-/// <summary>
-/// Allows persisting of a simple integer collection.
-/// </summary>
 [ComplexType]
 public class PersistableStringCollection : PersistableScalarCollection<string>
 {
@@ -193,21 +219,24 @@ public class PersistableStringCollection : PersistableScalarCollection<string>
 }
 ```
 
-Once that is created, we can change our Entity Framework class as follows to support the list of strings:
+### List of Ints
+
+Similarly, if we need to serialize a list of ints, we simply create the following class:
 
 ```c#
-[Table("YourTableName")]
-public class YourEntity
+[ComplexType]
+public class PersistableIntCollection : PersistableScalarCollection<int>
 {
-    [Key]
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int Id { get; set; }
+	protected override int ConvertSingleValueToRuntime(string rawValue)
+	{
+		return int.Parse(rawValue);
+	}
 
-	[Column("YourColumnName", TypeName ="ntext")]
-	public virtual PersistableStringCollection YourList { get; set; }
+	protected override string ConvertSingleValueToPersistable(int value)
+	{
+		return value.ToString();
+	}
 }
 ```
-
-Note the replacement of the List<string> with virtual PersistableStringCollection.
 
 That's it, once again thanks Bernhard for this little gem.
