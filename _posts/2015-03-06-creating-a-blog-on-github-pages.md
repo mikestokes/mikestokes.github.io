@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Using Lists with Entity Framework
+title: Creating a Blog on Github Pages
 comments: True
 category: blogging
 tags: [github-pages, jekyll, blogging, markdown blogging]
