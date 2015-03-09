@@ -1,3 +1,11 @@
+---
+layout: post
+title: Using Lists with Entity Framework
+comments: True
+category: blogging
+tags: [github-pages, jekyll, blogging, markdown blogging]
+---
+
 As a developer I find the typical flow used for blogging to be less than ideal. I want a flow that embraces the tools I use on a daily basis.
 
 Luckily Github has a great feature called Pages that allows us devs to host static content as a web site - they even allow us to associate a custom domain name (e.g. example.com) with the web site. And best of all this is all free and super easy to set up!
@@ -16,4 +24,4 @@ I have tried a few and prefer either [Jekyll Now](https://github.com/barryclark/
 
 * Visit the repository you want to clone.
 * Click the Fork button.
-* 
+*

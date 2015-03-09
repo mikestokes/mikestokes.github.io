@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Using Lists with Entity Framework
+comments: True
 category: programming
 tags: [c#, entity framework]
 ---
