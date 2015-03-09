@@ -7,15 +7,15 @@ permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            Mike Stokes
-tagline:          'A Jekyll theme'
-description:      'A blog by a coder who loves tech and is lucky enough to play in his sandpit with it every day.'
+title:            Code by Numbers
+tagline:          'A Coding Blog'
+description:      'Capturing the cool and useful things I find on my coding adventures in the Cloud'
 url:              http://mikestokes.co
 baseurl:          /
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           'Mike Stokes'
+  url:            http://mikestokes.co
 
 paginate:         5
 

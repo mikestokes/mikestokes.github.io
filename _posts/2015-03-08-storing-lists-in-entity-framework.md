@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Entity Framework and Lists
+title: Using Lists with Entity Framework
 category: programming
 tags: [c#, entity framework]
 ---
 
 By default [Entity Framework](http://www.asp.net/entity-framework) (as of version 6.x) does not support serialization of Lists to a database field. We could always go relational with this, creating another database table for the List values and use a foreign-key relationship with the parent entity. But sometimes, for simplicity sake, we want to store the List values within the same entity.
 
-Out of the box, the following is *not* possible by default in Entity Framework:
+Out of the box, the following is *not* possible in Entity Framework:
 
 ```c#
 [Table("YourTableName")]
