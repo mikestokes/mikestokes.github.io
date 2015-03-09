@@ -5,9 +5,9 @@ category: programming
 tags: [c#, entity framework]
 ---
 
-By default [Entity Framework](http://www.asp.net/entity-framework) (as of version 6.x) does not support serialization of Lists to a database field.
+By default [Entity Framework](http://www.asp.net/entity-framework) (as of version 6.x) does not support serialization of Lists to a database field. We could always go relational with this, creating another database table for the List values and use a foreign-key relationship with the parent entity. But sometimes, for simplicity sake, we want to store the List values within the same entity.
 
-For example, the following is *not* possible by default in Entity Framework:
+Out of the box, the following is *not* possible by default in Entity Framework:
 
 ```c#
 [Table("YourTableName")]
@@ -23,7 +23,7 @@ public class YourEntity
 
 ## Serializing Lists using Entity Framework Complex Types
 
-After searching I came upon a rather simple (and re-usable) solution from [Bernhard Kircker](http://stackoverflow.com/questions/11985267/entity-framework-options-to-map-list-of-strings-or-list-of-int-liststring) that we have put into production and has been working very well for us. I'll outline here what we did, with thanks to Bernhard for the solution.
+After searching, I came upon a rather simple (and re-usable) solution from [Bernhard Kircker](http://stackoverflow.com/questions/11985267/entity-framework-options-to-map-list-of-strings-or-list-of-int-liststring) that we have put into production and has been working very well for us. I'll outline here what we did, with thanks to Bernhard for the solution.
 
 With Bernhard's solution, the above Entity class can simply be changed and Entity Framework will take care of the rest for you:
 
