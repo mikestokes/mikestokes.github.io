@@ -7,7 +7,7 @@ permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            Code by Numbers
+title:            Code Maverick
 tagline:          'A Coding Blog'
 description:      'Capturing the cool and useful things I find on my coding adventures in the Cloud'
 url:              http://mikestokes.co
@@ -16,6 +16,7 @@ baseurl:          /
 author:
   name:           'Mike Stokes'
   url:            http://mikestokes.co
+  linkedin:       http://nz.linkedin.com/in/themikestokes
 
 paginate:         5
 
