@@ -36,18 +36,23 @@ So with this information, I decided to MVP blog using GitHub Pages and see how i
 
 I decided to use the Hyde repository as a starting point as it looked quite beautiful and was simple to understand and enhance.
 
-#### Cloning the Hyde Repository
+#### Cloning the Base Repository
 
 If you don't already have a GitHub account, jump over there now and [create one for free](https://github.com/).
 
 Once you're logged into your GitHub account, the quickest way to get started is to clone an existing Jekyll repository to modify. As stated, I decided to use Hyde, so to do the same, visit the [Hyde repository](https://github.com/poole/hyde) and click the Fork button ![Hyde Repository Fork](http://mikestokes.co/public/img/fork-hype-repo.png)
 
+> There are other Jekyll repos you can clone to get started quickly. Check out [JekyllNow](https://github.com/barryclark/jekyll-now) and [Poole](https://github.com/poole/) for tsraters.
 
+#### Rename your Cloned Repository
 
+This step is critical! It's also easy :)
 
-I have tried a few and prefer either [Jekyll Now](https://github.com/barryclark/jekyll-now) or [Hyde](https://github.com/poole/hyde).  I used Hyde as the basis of this blog and it gives you a great start.
+In the cloned repository, click the Settings button and then rename the repository so it has exactly the same name as your GitHub home. For me that's "mikestokes.github.com", for you, it'll follow the pattern "yourgithubname.github.io".
 
-* Visit the repository you want to clone.
-* Click the Fork button.
-*
+![Hyde Repository Fork](http://mikestokes.co/public/img/rename-repo.png)
+
+#### Visit your Cloned Blog
+
+Your should now be able to visit your blog website at "yourgithubname.github.io".
 
