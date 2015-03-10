@@ -4,33 +4,27 @@ title: About
 comments: False
 ---
 
-About
-
 ![Image of Mike Stokes and Family](http://mikestokes.co/public/img/family.jpg "Me and Family")
 
+I am a Technical Lead working in exciting areas of Tech from Aucland, New Zealand. From a young age (yep, we have a [Vic 20](http://en.wikipedia.org/wiki/Commodore_VIC-20)!), I've been facinated with computers and getting them to do things. I teach coders on a daily basis and I want to use this website to help capture some of that and share it with you!
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+My current love affair with tech includes my favourites:
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+ * [Node.js](http://nodejs.org), especially hosting it as Micro-Services in the Cloud.
+ * [Amazone AWS](http://aws.amazon.com/) and [Microsoft Azure](http://azure.microsoft.com/en-us/), love them both for different reasons. Once again both support Micro-Services :) Both also offer free tiers for you to play with and it's often enough to get to launch!
+ * [Angular.js](https://angularjs.org/) for when you want to create a mdeium+ complexity JS app, you can't go past Anguilar JS for it's solid support of patterns.
+ * [Ionic Framework](http://ionicframework.com/), simply brilliant with [Apache Cordova](http://cordova.apache.org/) for cross-platform mobile development. The Ionic guys amaze me on a weekly basis!
+ * [.NET and Visual Studio 2015](https://www.visualstudio.com), this ones a bit controversial I know but I love the newer OWIN stack and direction Microsoft is going with this.
 
-There are currently two themes built on Poole:
+Some of my "side projects" include:
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+#### Codename "HotLunch"
+Launching soon as an MVP, this is a super exciting project a bunch of us have been working on to help people quickly create APIs in the Cloud. Stay tuned!
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+#### [Gingerbread Kids](http://gingerbreadkids.com/)
+A bunch of Patents creating educational Maths apps for kids in the Primary (Elementary for Americans) kids.
 
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
+#### [Click to Convert](http://clicktoconvert.com/)
+We created this document conversion tech as a side project in 1999 and sold our first copy on January 1st, 2000. It kept us busy and growing a business for 10 years and taught us a huge amnount about things us coders don't find intuitive like market positioning, marketing, sales and of course support :)
 
 Thanks for reading!
