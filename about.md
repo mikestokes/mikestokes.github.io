@@ -4,6 +4,11 @@ title: About
 comments: False
 ---
 
+About
+
+![Image of Mike Stokes and Family](http://mikestokes.co/img/family.jpg "Me and Family")
+
+
 <p class="message">
   Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
 </p>
