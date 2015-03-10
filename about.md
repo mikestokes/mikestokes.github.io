@@ -6,7 +6,7 @@ comments: False
 
 About
 
-![Image of Mike Stokes and Family](http://mikestokes.co/img/family.jpg "Me and Family")
+![Image of Mike Stokes and Family](http://mikestokes.co/public/img/family.jpg "Me and Family")
 
 
 <p class="message">
