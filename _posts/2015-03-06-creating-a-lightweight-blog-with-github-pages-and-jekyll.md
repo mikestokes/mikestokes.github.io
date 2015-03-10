@@ -56,3 +56,18 @@ In the cloned repository, click the Settings button and then rename the reposito
 
 Your should now be able to visit your blog website at "yourgithubname.github.io".
 
+![Hyde Repository Fork](http://mikestokes.co/public/img/hype-cloned-blog.png)
+
+## Customising your Blog
+
+Now that you have a static blog, we'll customise it over the next few blog posts.
+
+Things we'll be looking at customising:
+
+ * Title, blog description and other basics (hint: look at the _config.yml file)
+ * Links in the left hand navigation (hint: sidebar.html and head.html templates)
+ * Adding new posts (/posts folder)
+ * Adding Disqus comments to your blog posts
+ * Changing the Favicon (look in the /public folder)
+ * Adding Google Analytics (put it in the default.html template)
+ * Ideal Mac and Windows setups (I use [Hooroopad](http://pad.haroopress.com/) on Windows)

@@ -9,7 +9,7 @@ relative_permalinks: true
 # Setup
 title:            Code Maverick
 tagline:          'A Coding Blog'
-description:      'Capturing the coolest things I find on my Cloud coding adventures... so that you don''t have to!'
+description:      'Capturing the coolest things I find on my Cloud Coding Adventures... so that you don''t have to!'
 url:              http://mikestokes.co
 baseurl:          /
 
