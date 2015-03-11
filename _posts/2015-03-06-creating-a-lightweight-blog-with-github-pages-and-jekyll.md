@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Creating-a-Light-Weight-Blog-with-Github-Pages-and-Jekyll
+title: Creating a Lightweight Blog with Github-Pages and Jekyll
 comments: True
 category: blogging
 tags: [github-pages, jekyll, blogging, markdown blogging]
