@@ -6,6 +6,8 @@ category: aws
 tags: [aws, amazon, lambda, micro-services]
 ---
 
+(See the [GitHub repo](https://github.com/mikestokes/aws-lambda-s3-boilderplate) to clone the code)
+
 [AWS Lambda](http://aws.amazon.com/lambda/) is a service (currently in Preview) that allows us to easily run code in response to certain events. What that means is we can easily create small Micro-Services that do one thing and do it well in response to any given event. Good exmaples include:
 
  * Automatically optimizing images that are droppped into an S3 bucket
